@@ -4,21 +4,57 @@ body {
     background-position: cover;
 }
 
-header {
+h1 {
 
   font-family: 'Press Start 2P', cursive;
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
+/* upload bar */
+.thumb {
+   height: 500px;
+   width: 450px;
+   border: 2px solid #000;
+   margin: 10px 5px 0 0;
+   position: relative;
+   top: 120px;
+   left: 150px;
+   right: 150px;
+ }
+
+ /* #upload {
+   height: 490px;
+   width: 440px;
+ } */
+
+.thumb .img {
+  width: 440px;
+
+}
+
+
+/* rage meter */
+.healthbar {
+  var health = 100;
+  ctx.fillStyle = "#FF000";
+  ctx.fillRect(0,0,(health/100)*140,25);
+  //Whenever you lose health
+  health-=1;
+}
+
+
+/* background image for dungeon */
 .dungeon {
 
     background-image: url("/Users/TiffC/Dropbox (Allies of Skin)/TIFF/WDI/Project One/fire burning background.gif");
-    height: 500px;
+    height: 800px;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 0px;
+    position: relative;
+    top: -50px;
+    background-size: 100vw 100vh;
 
 }
