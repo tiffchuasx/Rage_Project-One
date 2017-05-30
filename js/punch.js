@@ -4,7 +4,7 @@ var Punch = function(settings) {
     var punch = null;
 
     // Create punching motion with every click
-    function punching(){
+    function punching(interactions){
 
 
     }

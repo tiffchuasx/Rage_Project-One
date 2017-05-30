@@ -2,7 +2,7 @@ var Game = function() {
 
     // Game settings
     var settings = {};                     // Containes all game settings
-    settings.punchSpeed = 8;                // The speed of the ball
+    settings.punchSpeed = 8;                // The speed of the punch
     //settings.walls = true;                 // The ball can not go outside the screen
     //settings.automatic = false;            // The ball will move by itself
     //settings.godmode = false;              // Debug mode
@@ -14,30 +14,20 @@ var Game = function() {
     var frame = 0;                        // Frames since the start of the game
 
     // Interactions
-    /* var interactions = {};
-    interactions.up = false;              // Up arrow key pressed
-    interactions.down = false;            // Down arrow key pressed
-    interactions.left = false;            // Left arrow key pressed
-    interactions.right = false;           // Right arrow ket pressed
-    interactions.space = false;           // Speace key pressed */
+    var interactions = {};
+    interactions.click = false;           // mouse pressed */
 
     // Setup event listeners
     function setupEvents() {
 
       document.addEventListener('click', function(event){
-        var keyName = event.key;
+        targetName = event.target;
+        console.log(targetName);
 
       });
 
 
-
-
-
-
-
     }
-
-
 
     // Startup the game
     function init(){
@@ -45,13 +35,13 @@ var Game = function() {
     }
 
     // The render function. It will be called 60/sec
-    function render(){
-
+    this.render = function(){
       for(var i=0; i < assets.length; i++){
         assets[i].render(interactions);
       }
     }
 
+    var self = this;
     window.requestAnimFrame = (function(){ //gets animation frame from the browser
       return  window.requestAnimationFrame       ||
               window.webkitRequestAnimationFrame ||
@@ -64,7 +54,7 @@ var Game = function() {
 
             (function animloop(){
               requestAnimFrame(animloop);
-              render();
+              self.render();
             })();
 
             init();

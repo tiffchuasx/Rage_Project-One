@@ -13,41 +13,8 @@ h1 {
   margin-top: 20px;
 }
 
-/* upload bar */
-.thumb {
-   height: 500px;
-   width: 450px;
-   border: 2px solid #000;
-   margin: 10px 5px 0 0;
-   position: relative;
-   top: 120px;
-   left: 150px;
-   right: 150px;
- }
-
- /* #upload {
-   height: 490px;
-   width: 440px;
- } */
-
-.thumb .img {
-  width: 440px;
-
-}
-
-
-/* rage meter */
-.healthbar {
-  var health = 100;
-  ctx.fillStyle = "#FF000";
-  ctx.fillRect(0,0,(health/100)*140,25);
-  //Whenever you lose health
-  health-=1;
-}
-
-
-/* background image for dungeon */
-.dungeon {
+/* background image for container */
+.container {
 
     background-image: url("/Users/TiffC/Dropbox (Allies of Skin)/TIFF/WDI/Project One/fire burning background.gif");
     height: 800px;
@@ -55,6 +22,53 @@ h1 {
     background-position: center;
     position: relative;
     top: -50px;
-    background-size: 100vw 100vh;
+    background-size: 90vw 100vh;
 
+}
+
+/* upload box */
+.thumb {
+   height: 500px;
+   max-width: 450px;
+   border: 2px solid #000;
+   margin: 10px 5px 0 0;
+   position: absolute;
+   top: 15%;
+   left: 10%;
+   right: 10%;
+ }
+
+ /* rage meter */
+ #ragemeter {
+     background-color: red;
+     height: 40px;
+     width: 200px;
+     min-width: 300px;
+     position: absolute;
+     top: 10%;
+     left: 17%;
+     border: 1px solid #000;
+     border-radius: 10%;
+ }
+
+/* weapons */
+#wrapper {
+  position: relative;
+  top: 10%;
+  right: 20%;
+  float: right;
+}
+
+ li {
+   height: 130px;
+   width: 200px;
+   margin-bottom: 5px;
+ }
+
+ul {
+  list-style: none
+}
+
+#timer, #weapon1, #weapon2, #weapon3 {
+background-color: rgba(0,0,0,0.5);
 }

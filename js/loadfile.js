@@ -49,6 +49,6 @@ $(function() {
           $("input").after(img);
           var uploaded = $('.thumb img')[0]
           uploaded.setAttribute("style", "width:450px; height:480px;")
-        
+
   });
 })
