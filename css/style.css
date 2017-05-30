@@ -16,7 +16,7 @@ h1 {
 /* background image for container */
 .container {
 
-    background-image: url("/Users/TiffC/Dropbox (Allies of Skin)/TIFF/WDI/Project One/fire burning background.gif");
+    background-image: url("../fire burning background.gif");
     height: 800px;
     background-repeat: no-repeat;
     background-position: center;
@@ -27,7 +27,7 @@ h1 {
 }
 
 /* upload box */
-.thumb {
+#thumb {
    height: 500px;
    max-width: 450px;
    border: 2px solid #000;

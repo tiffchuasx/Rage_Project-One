@@ -31,7 +31,7 @@
 $(function() {
   $("input").change(function(e) {
 
-          var node = $('.thumb')[0]
+          var node = $('#thumb')[0]
           console.log(node.childNodes)
           while(node.childNodes[2]) {
             node.removeChild(node.childNodes[2]);
@@ -47,8 +47,9 @@ $(function() {
           console.log('before read')
           reader.readAsDataURL(file);
           $("input").after(img);
-          var uploaded = $('.thumb img')[0]
+          var uploaded = $('#thumb img')[0]
           uploaded.setAttribute("style", "width:450px; height:480px;")
+          uploaded.setAttribute("id", "img")
 
   });
 })
