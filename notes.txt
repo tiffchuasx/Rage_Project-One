@@ -1,0 +1,179 @@
+
+
+    <!--
+
+          <input type="file">
+          <div id="thumb">
+            <img src="hand.png" id="base"/>
+            <img src="broken_1.png" id="level1"/>
+          </div>
+        </div>
+
+
+      <!--weapons panel!-->
+
+      <div id="wrapper">
+
+        <ul>
+          <div id="timer">
+            <li>
+              TIMER
+            </li>
+          </div>
+
+          <div id="weapon1">
+            <li>
+              W1
+            </li>
+          </div>
+
+          <div id="weapon2">
+            <li>
+              W2
+            </li>
+          </div>
+
+          <div id="weapon3">
+            <li>
+              W3
+            </li>
+          </div>
+
+        </ul>
+      </div>
+
+
+</div>
+
+
+  </section>
+
+
+
+
+  css
+
+
+  body {
+      background-repeat: no-repeat;
+      background-position: cover;
+  }
+
+  h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  /* background image for container */
+  .container {
+
+      background-image: url("../fire burning background.gif");
+      height: 800px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      top: -50px;
+      background-size: 90vw 100vh;
+
+  }
+
+  /* upload box */
+
+  #thumb img {
+    height: 500px;
+    max-width: 450px;
+  }
+
+  #thumb {
+     height: 500px;
+     max-width: 450px;
+     border: 2px solid #000;
+     margin: 10px 5px 0 0;
+     position: absolute;
+     top: 15%;
+     left: 10%;
+     right: 10%;
+  }
+
+  #level1{
+    height: 500px;
+    max-width: 450px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    z-index: 10;
+  }
+
+
+
+   /* rage meter */
+   #ragemeter {
+       background-color: red;
+       height: 40px;
+       width: 200px;
+       min-width: 300px;
+       position: absolute;
+       top: 10%;
+       left: 17%;
+       border: 1px solid #000;
+       border-radius: 10%;
+   }
+
+  /* weapons */
+  #wrapper {
+    position: relative;
+    top: 10%;
+    right: 20%;
+    float: right;
+  }
+
+   li {
+     height: 130px;
+     width: 200px;
+     margin-bottom: 5px;
+   }
+
+  ul {
+    list-style: none
+  }
+
+  #timer, #weapon1, #weapon2, #weapon3 {
+  background-color: rgba(0,0,0,0.5);
+  }
+
+
+
+  // function handleFileSelect(evt) {
+  //     var files = evt.target.files; // FileList object
+  //
+  //     // Loop through the FileList and render image files as thumbnails.
+  //     for (var i = 0, f; f = files[i]; i++) {
+  //
+  //       // Only process image files.
+  //       if (!f.type.match('image.*')) {
+  //         continue;
+  //       }
+  //
+  //       var reader = new FileReader();
+  //
+  //       // Closure to capture the file information.
+  //       reader.onload = (function(theFile) {
+  //         return function(e) {
+  //           // Render thumbnail.
+  //           var span = document.createElement('span');
+  //           span.innerHTML = ['<img id="thumb" src="', e.target.result,
+  //                             '" title="', escape(theFile.name), '"/>'].join('');
+  //           document.getElementById('list').insertBefore(span, null);
+  //         };
+  //       })(f);
+  //
+  //       // Read in the image file as a data URL.
+  //       reader.readAsDataURL(f);
+  //     }
+  //   }
+  //
+  //   document.getElementById('files').addEventListener('change', handleFileSelect, false);
