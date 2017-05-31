@@ -18,7 +18,9 @@ h1 {
 #timer {
   font-size: 30px;
   font-family: monospace;
+  font-weight: bold;
   text-align: center;
+
 }
 
 .arena {
@@ -27,8 +29,28 @@ h1 {
 
 .weapon {
   height: 100px;
-  background-color: green;
+  background-color: rgba(0,0,0,0.5);
   margin-bottom: 20px;
+}
+
+#weapon1, #weapon2, #weapon3 {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#weapon1 {
+  background-image: url("../handselect.png");
+  /*cursor: url("../hand.png"), none;*/
+}
+
+#weapon2 {
+  background-image: url("../knifeselect.png");
+  /*cursor: url("../knife.png"), none;*/
+}
+
+#weapon3 {
+  background-image: url("../eggselect.png");
+  /*cursor: url("../egg.png"), none;*/
 }
 
 input {

@@ -2,10 +2,7 @@ var Game = function() {
 
     // Game settings
     var settings = {};                     // Containes all game settings
-    settings.weaponSpeed = 8;                // The speed of the punch
-    //settings.walls = true;                 // The ball can not go outside the screen
-    //settings.automatic = false;            // The ball will move by itself
-    //settings.godmode = false;              // Debug mode
+    settings.weaponSpeed = 8;                // The speed of the weapon
 
     // World settings
     var assets = [];                      // All game objects
@@ -15,6 +12,7 @@ var Game = function() {
     var secondsPassed = 0;
     var clickCount = 0;                   // Number of clicks on image
 
+    var timerSecond = 60;
     // Interactions
     var interactions = {};
     interactions.click = false;           // mouse pressed */
@@ -22,30 +20,26 @@ var Game = function() {
     var clicked = false;
     // Setup event listeners
     function setupEvents() {
-
+      document.body.style.cursor = 'auto'
       document.addEventListener('click', function(event){
         console.log('event listener up')
         clicked = true;
         var targetName = event.target;
-        console.log(targetName)
+
         switch(targetName.id) {
-          case "img":
+          case "weapon1":
             clickCount++;
             console.log(clickCount);
-            break;
-          case "weapon1":
-            gameWeapon = 0;
+            document.getElementsByClassName('arena')[0].setAttribute("style", "cursor:url('hand.png'), none")
             break;
           case "weapon2":
-            gameWeapon = 1;
+            // gameWeapon = 0;
+            document.getElementsByClassName('arena')[0].setAttribute("style", "cursor:url('knifeselect.png'), none")
             break;
           case "weapon3":
-            gameWeapon = 2;
-          break;
+          document.getElementsByClassName('arena')[0].setAttribute("style", "cursor:url('egg.png'), none")
+            break;
         }
-
-
-
 
       });
 
