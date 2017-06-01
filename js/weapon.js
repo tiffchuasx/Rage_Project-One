@@ -1,13 +1,17 @@
 var Weapon = function(settings) {
 
-  var hit = 0;
+  var handCursor = document.getElementsByClassName('arena')[0].style.cursor="url('hand.png'), none"
+  var knifeCursor = document.getElementsByClassName('arena')[0].style.cursor="url('knife.png'), none"
 
-    $('.arena').on('click', function(){
-        hit++;
-        if(hit > 5){
-          $('#damage').show();
-        }
-      });
+      $('.arena').on('click', function(event){
+
+          if(handCursor){
+            var clicks = settings.handClick++;
+            if (clicks > 15)
+            $('#damage5').show();
+          }
+
+        });
 
 
     this.render = function(interactions,gameWeapon){

@@ -3,14 +3,16 @@ var Game = function() {
     // Game settings
     var settings = {};                     // Containes all game settings
     settings.weaponSpeed = 8;                // The speed of the weapon
-
+    settings.handClick = 0;
+    settings.knifeClick = 0;
+    settings.eggClick = 0
     // World settings
     var assets = [];                      // All game objects
     var player = new Weapon(settings);      // The player
     assets[0] = player;
     var frame = 0;                        // Frames since the start of the game
     var secondsPassed = 0;
-    var clickCount = 0;                   // Number of clicks on image
+    //var clickCount = 0;                   // Number of clicks on image
 
     var timerSecond = 60;
     // Interactions
@@ -18,6 +20,7 @@ var Game = function() {
     interactions.click = false;           // mouse pressed */
     var gameWeapon;                                // a is
     var clicked = false;
+
     // Setup event listeners
     function setupEvents() {
       document.body.style.cursor = 'auto'
@@ -28,8 +31,6 @@ var Game = function() {
 
         switch(targetName.id) {
           case "weapon1":
-            clickCount++;
-            console.log(clickCount);
             document.getElementsByClassName('arena')[0].setAttribute("style", "cursor:url('hand.png'), none")
             break;
           case "weapon2":

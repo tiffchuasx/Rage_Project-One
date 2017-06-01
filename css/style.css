@@ -23,6 +23,10 @@ h1 {
 
 }
 
+.progresstext {
+  letter-spacing: 3px;
+}
+
 .arena {
   height: 500px;
 }
@@ -70,7 +74,6 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-
 }
 
 #damage {
@@ -79,6 +82,83 @@ input {
   background-size: cover;
   background-position: center center;
   background-image: url('../broken_1.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+#damage2 {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../broken_1.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  display: none;
+}
+#damage3 {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../broken_1.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  display: none;
+}
+
+#damage4 {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../broken_1.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  display: none;
+}
+
+#damage5 {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../broken_5.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: none;
+}
+
+#kdamage {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../blood_1.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+#edamage {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../sunnyegg.png');
   position: absolute;
   top: 0;
   left: 0;

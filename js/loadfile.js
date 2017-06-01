@@ -1,6 +1,9 @@
 
+var timerSecond = 60
+
+//Creating file reader and uploading image
 $(function() {
-  var timerSecond = 60
+
   console.log($("input"));
   $("input").change(function(e) {
 
@@ -17,16 +20,9 @@ $(function() {
           reader.readAsDataURL(file);
   });
 
-  // var hit = 0;
-  //
-  // $('.arena').on('click', function(){
-  //   hit++;
-  //   if(hit > 5){
-  //     $('#damage').show();
-  //   }
-  // });
-
+//Creating timer once page loads
 startTimer =  setInterval(countDown,1000) //countdown per every second.
+
 function countDown(){
   var timer = document.getElementById('timer')
 
