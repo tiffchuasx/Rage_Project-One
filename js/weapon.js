@@ -18,7 +18,7 @@ var Weapon = function(settings) {
   function checkGameEnd(){
     var timer = document.getElementById('timer')
     if(timer.innerHTML=='00:00'){
-      gameEnd=true
+      gameEnd = true
     }
   }
 
@@ -53,7 +53,7 @@ var Weapon = function(settings) {
   })
 
   $('.arena').on('click', function(event){
-    if(gameEnd==false){
+    if(gameEnd == false){
     var Cursor = document.getElementsByClassName('arena')[0].style.cursor;
 
       if(Cursor == 'url("hand.png"), none'){
