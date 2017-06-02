@@ -88,6 +88,7 @@ var Weapon = function(settings) {
         var clicks = settings.eggClick++;
 
         if (clicks === 150){
+          console.log('egg click >10')
           $('#edamage4').show();
           monsterKill.play();
         } else if (clicks > 90){

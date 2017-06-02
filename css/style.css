@@ -241,9 +241,9 @@ input {
 #edamage4 {
   height: 500px;
   width: 100%;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
-  background-image: url('../eggsplat_4.png');
+  background-image: url('../eggsplat_2.png');
   position: absolute;
   top: 0;
   left: 0;
