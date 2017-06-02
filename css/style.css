@@ -15,6 +15,28 @@ h1 {
   text-align: center;
 }
 
+#wrapper {
+  text-transform: capitalize;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+
+}
+
+#wrapper .instructions {
+  margin-top: 200px;
+}
+
+#wrapper #ps {
+  font-size: 15px;
+  color: red;
+}
+
 #timer {
   font-size: 30px;
   font-family: monospace;
@@ -112,12 +134,12 @@ input {
   display: none;
 }
 
-#kdamage1 {
+#hdamage4 {
   height: 500px;
   width: 100%;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
-  background-image: url('../blood_1.png');
+  background-image: url('../broken_4.png');
   position: absolute;
   top: 0;
   left: 0;
@@ -125,12 +147,12 @@ input {
   display: none;
 }
 
-#kdamage2 {
+#kdamage1 {
   height: 500px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url('../blood_2.png');
+  background-image: url('../blood_1.png');
   position: absolute;
   top: 40;
   left: 100;
@@ -142,8 +164,34 @@ input {
   height: 500px;
   width: 100%;
   background-repeat: no-repeat;
+  background-image: url('../blood_2.png');
+  position: absolute;
+  background-position: 90% 70%;
+  top: 100;
+  left: 100;
+  z-index: 10;
+  display: none;
+}
+
+#kdamage3 {
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
   background-position: center center;
   background-image: url('../blood_3.png');
+  position: absolute;
+  top: 40;
+  left: 100;
+  z-index: 10;
+  display: none;
+}
+
+#kdamage4 {
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../blood_4.png');
   position: absolute;
   top: 40;
   left: 100;
@@ -168,8 +216,9 @@ input {
   height: 500px;
   width: 100%;
   background-repeat: no-repeat;
-  background-image: url('../eggsplat_2.png');
+  background-image: url('../eggsplat_1.png');
   position: absolute;
+  background-position: 50% 60%;
   top: 0;
   left: 0;
   z-index: 10;
@@ -180,9 +229,22 @@ input {
   height: 500px;
   width: 100%;
   background-repeat: no-repeat;
-  background-image: url('../eggsplat_3.png');
+  background-image: url('../eggsplat_1.png');
   position: absolute;
-  background-position: 80% 50%;
+  background-position: 0% 90%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+#edamage4 {
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../eggsplat_4.png');
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 10;

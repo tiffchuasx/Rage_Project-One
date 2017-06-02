@@ -24,57 +24,71 @@
     <audio id="ultrakill" hidden="hidden"><source src="sounds/ultrakill.wav" type="audio/wav" /></audio>
     <audio id="dominating" hidden="hidden"><source src="sounds/dominating.wav" type="audio/wav" /></audio>
 
-  <div class="container">
-
-    <!-- Header -->
-    <div class="row">
-      <div class="col-md-12">
-        <h1>RAGE</h1>
-      </div>
+  <div id="wrapper">
+    <div class="instructions">
+      Uncover the hidden message
+      <br />Step 1: Upload an image
+      <br />Step 2: Choose a weapon
+      <br />Step 3: Inflict damage!
+      <br /><span id="ps">PS. Switching your weapon during the game will cause your progress to drop!</span>
+      <br /><img src="start_button.png" id="start-button"/>
     </div>
+  </div>
 
-    <!-- Timer -->
-    <div class="row">
-      <div class="col-md-4 col-md-offset-4">
-        <div id="timer"></div>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="row">
+        <div class="col-md-12">
+          <h1>RAGE</h1>
+        </div>
       </div>
-    </div>
 
-    <!-- Gameboard -->
-    <div class="row">
-      <div class="col-md-6 col-md-offset-2">
-          <div class="progress">
-            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-            <span class="progresstext">HOLDING ONTO ANGER IS LIKE DRINKING POISON AND EXPECTING THE OTHER PERSON TO DIE</span>
+      <!-- Timer -->
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <div id="timer"></div>
+        </div>
+      </div>
+
+      <!-- Gameboard -->
+      <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+              <span class="progresstext">HOLDING ONTO ANGER IS LIKE DRINKING POISON AND EXPECTING THE OTHER PERSON TO DIE</span>
+            </div>
+          </div>
+          <div class="arena" style="cursor:auto">
+            <div id="punchball"></div>
+            <div id="hdamage1"></div>
+            <div id="hdamage2"></div>
+            <div id="hdamage3"></div>
+            <div id="kdamage1"></div>
+            <div id="kdamage2"></div>
+            <div id="kdamage3"></div>
+            <div id="kdamage4"></div>
+            <div id="edamage1"></div>
+            <div id="edamage2"></div>
+            <div id="edamage3"></div>
+          </div>
+          <div>
+          <input type="file">
           </div>
         </div>
-        <div class="arena" style="cursor:auto">
-          <div id="punchball"></div>
-          <div id="hdamage1"></div>
-          <div id="hdamage2"></div>
-          <div id="hdamage3"></div>
-          <div id="kdamage1"></div>
-          <div id="kdamage2"></div>
-          <div id="kdamage3"></div>
-          <div id="edamage1"></div>
-          <div id="edamage2"></div>
-          <div id="edamage3"></div>
-        </div>
-        <div>
-        <input type="file">
-        </div>
-      </div>
 
-      <!-- weapons sidebar -->
-      <aside class="col-md-2">
-        <div class="weapon" id="weapon1"></div>
-        <div class="weapon" id="weapon2"></div>
-        <div class="weapon" id="weapon3"></div>
-      </aside>
+        <!-- weapons sidebar -->
+        <aside class="col-md-2">
+          <div class="weapon" id="weapon1"></div>
+          <div class="weapon" id="weapon2"></div>
+          <div class="weapon" id="weapon3"></div>
+        </aside>
+
+      </div>
 
     </div>
 
-  </div>
+
 
 
 

@@ -14,7 +14,7 @@ var Game = function() {
     var secondsPassed = 0;
     var timerSecond = 30;
     var gameEnd = false;
-    var lastResort = document.getElementById('lastresort');
+
 
     // Interactions
     var interactions = {};
@@ -42,35 +42,11 @@ var Game = function() {
             break;
         }
 
-        if(!clicked) {
-          startTimer =  setInterval(countDown,1000) //countdown per every second.
-        }
-
-        clicked = true;
-
-        lastResort.play();
-
       });
 
     }
 
-    function countDown(){
-      var timer = document.getElementById('timer')
 
-          if (timerSecond != 0) {
-            timerSecond -= 1
-
-            if (timerSecond < 10) {
-              timer.innerHTML = "00:0" + timerSecond
-            }
-            else if (timerSecond < 30) {
-              timer.innerHTML = "00:" + timerSecond
-            }
-            else {
-              timer.innerHTML = "00:00"
-            }
-          }
-    }
 
 
     // Startup the game
@@ -104,15 +80,17 @@ var Game = function() {
               };
             })();
 
-            if(gameEnd == false){
               (function animloop(){
                 requestAnimFrame(animloop);
                 self.render();
                 checkGameEnd();
               })();
-            }
+
 
             init();
-}
+  }
 
-var g = new Game();
+document.getElementById('start-button').addEventListener('click', function(){
+  document.getElementById('wrapper').setAttribute('style', 'display:none;')
+  var g = new Game();
+})
