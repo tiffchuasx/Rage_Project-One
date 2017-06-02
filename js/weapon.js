@@ -3,6 +3,7 @@ var Weapon = function(settings) {
   var click = 0;
   var timerSecond = 30;
   var clicked = false;
+  var gameEnd = false;
 
   // Sound effects
   var firstBlood = document.getElementById('firstblood');
@@ -13,6 +14,13 @@ var Weapon = function(settings) {
   var ultraKill = document.getElementById('ultrakill');
   var dominating = document.getElementById('dominating');
   var lastResort = document.getElementById('lastresort');
+
+  function checkGameEnd(){
+    var timer = document.getElementById('timer')
+    if(timer.innerHTML=='00:00'){
+      gameEnd=true
+    }
+  }
 
   function countDown(){
     var timer = document.getElementById('timer')
@@ -28,6 +36,7 @@ var Weapon = function(settings) {
           }
           else {
             timer.innerHTML = "00:00"
+            checkGameEnd()
           }
         }
   }
@@ -44,7 +53,7 @@ var Weapon = function(settings) {
   })
 
   $('.arena').on('click', function(event){
-
+    if(gameEnd==false){
     var Cursor = document.getElementsByClassName('arena')[0].style.cursor;
 
       if(Cursor == 'url("hand.png"), none'){
@@ -107,7 +116,7 @@ var Weapon = function(settings) {
 
       var width = (100 / 150) * clicks
       $('.progress-bar').css('width', width + '%');
-
+    }
   });
 
 

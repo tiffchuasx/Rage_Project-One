@@ -63,12 +63,7 @@ var Game = function() {
       frame++;
     }
 
-    function checkGameEnd(){
-      var timer = document.getElementById('timer')
-      if(timer.innerHTML=='00:00'){
-        gameEnd=true
-      }
-    }
+
 
     var self = this;
     window.requestAnimFrame = (function(){ //gets animation frame from the browser
@@ -83,7 +78,6 @@ var Game = function() {
               (function animloop(){
                 requestAnimFrame(animloop);
                 self.render();
-                checkGameEnd();
               })();
 
 
