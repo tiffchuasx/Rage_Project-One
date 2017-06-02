@@ -37,6 +37,7 @@ var Weapon = function(settings) {
 
         if (clicks > 20){
           $('#kdamage3').show();
+          wickedSick.play();
         } else if (clicks > 10){
           $('#kdamage2').show();
         } else if (clicks > 5){
@@ -49,7 +50,7 @@ var Weapon = function(settings) {
 
         var clicks = settings.eggClick++;
 
-        if (clicks = 50){
+        if (clicks > 50){
           $('#edamage3').show();
         } else if (clicks > 10){
           $('#edamage2').show();
@@ -58,17 +59,17 @@ var Weapon = function(settings) {
         }
       }
 
-      if(clicks > 300){
-        clicks = 300;
+      if(clicks > 100){
+        clicks = 100;
       }
 
-      var width = (100 / 300) * clicks
+      var width = (100 / 100) * clicks
       $('.progress-bar').css('width', width + '%');
 
   });
 
 
-    this.render = function(interactions,gameWeapon){
+    this.render = function(gameWeapon){
     }
 
 };

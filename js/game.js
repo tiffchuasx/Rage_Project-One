@@ -12,7 +12,9 @@ var Game = function() {
     assets[0] = player;
     var frame = 0;                        // Frames since the start of the game
     var secondsPassed = 0;
-    var timerSecond = 60;
+    var timerSecond = 30;
+    var gameEnd = false;
+    var lastResort = document.getElementById('lastresort');
 
     // Interactions
     var interactions = {};
@@ -25,7 +27,7 @@ var Game = function() {
       document.body.style.cursor = 'auto'
       document.addEventListener('click', function(event){
         console.log('event listener up')
-        clicked = true;
+
         var targetName = event.target;
 
         switch(targetName.id) {
@@ -40,10 +42,36 @@ var Game = function() {
             break;
         }
 
+        if(!clicked) {
+          startTimer =  setInterval(countDown,1000) //countdown per every second.
+        }
+
+        clicked = true;
+
+        lastResort.play();
+
       });
 
-
     }
+
+    function countDown(){
+      var timer = document.getElementById('timer')
+
+          if (timerSecond != 0) {
+            timerSecond -= 1
+
+            if (timerSecond < 10) {
+              timer.innerHTML = "00:0" + timerSecond
+            }
+            else if (timerSecond < 30) {
+              timer.innerHTML = "00:" + timerSecond
+            }
+            else {
+              timer.innerHTML = "00:00"
+            }
+          }
+    }
+
 
     // Startup the game
     function init(){
@@ -59,6 +87,13 @@ var Game = function() {
       frame++;
     }
 
+    function checkGameEnd(){
+      var timer = document.getElementById('timer')
+      if(timer.innerHTML=='00:00'){
+        gameEnd=true
+      }
+    }
+
     var self = this;
     window.requestAnimFrame = (function(){ //gets animation frame from the browser
       return  window.requestAnimationFrame       ||
@@ -69,11 +104,13 @@ var Game = function() {
               };
             })();
 
-
-            (function animloop(){
-              requestAnimFrame(animloop);
-              self.render();
-            })();
+            if(gameEnd == false){
+              (function animloop(){
+                requestAnimFrame(animloop);
+                self.render();
+                checkGameEnd();
+              })();
+            }
 
             init();
 }
